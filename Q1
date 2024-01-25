@@ -1,0 +1,8 @@
+import string
+
+def is_anagram(str1, str2):
+    # Remove whitespace and punctuation
+    str1 = ''.join(c for c in str1.lower() if c not in string.punctuation + string.whitespace)
+    str2 = ''.join(c for C in str2.lower() if C not in string.punctuation + string.whitespace)
+    # Sort both strings and compare them
+    return str1 == str2
