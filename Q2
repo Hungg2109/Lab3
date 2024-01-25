@@ -1,0 +1,19 @@
+def is_hexadecimal(string):
+    """Returns True if the string contains only hexadecimal digits, False otherwise."""
+    return all(c in string.hexdigits for c in string)
+
+def hexadecimal_to_decimal(string):
+    """Converts a hexadecimal string to its decimal equivalent."""
+    return int(string, 16)
+
+# Read a string from the user
+string = input("Enter a string: ")
+
+# Check if the string is a hexadecimal string
+if is_hexadecimal(string):
+    # Convert the hexadecimal string to its decimal equivalent
+    decimal = hexadecimal_to_decimal(string)
+    print(f"The decimal equivalent of {string} is {decimal}.")
+else:
+    # Print an error message
+    print(f"Error: {string} is not a hexadecimal string.")
